@@ -1,10 +1,18 @@
 <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
   <div class="container">
     <a class="navbar-brand" href="/">DYEL</a>
+    <ul class="nav navbar-nav">
+      <% if user_signed_in? %>
+        <li class="nav-item">
+          Welcome <%= current_user.username %>!
+        </li>
+        <li class="nav-item">
+          <%= link_to "Logout", destroy_user_session_path, class:"nav-link", :method => 'delete' %>
+        </li>
+      <% end %>
+    </ul>
     <ul class="nav navbar-nav pull-xs-right">
-      <li class="nav-item"><a class="nav-link" href="#">Workouts</a></li>
-      <li class="nav-item"><a class="nav-link" href="#contact">Add Workout</a></li>
-      <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+      <%= navbar_links %>
     </ul>
   </div><!-- /.container -->
 </nav><!-- /.navbar -->
