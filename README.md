@@ -9,5 +9,6 @@ More info to come.
 ~~1. Finish Login system~~
 2. Build out workouts using Rails conventions (belongs_to User, has_many exercises)
 3. Build Exercises class (belongs_to workout)
+  
 --
 4. Refactor to use Angular

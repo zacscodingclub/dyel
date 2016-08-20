@@ -9,7 +9,16 @@ class WorkoutsController < ApplicationController
     @workout = Workout.find(params[:id])
   end
 
-  def create
-
+  def new
+    @workout = Workout.new
   end
+
+  def create
+    binding.pry
+  end
+
+  private
+    def workout_params
+      params.require(:workout).permit(:date)
+    end
 end
