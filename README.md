@@ -6,7 +6,7 @@ More info to come.
 
 
 ## To-Do
-1. Finish Login system
+~~1. Finish Login system~~
 2. Build out workouts using Rails conventions (belongs_to User, has_many exercises)
 3. Build Exercises class (belongs_to workout)
 --
